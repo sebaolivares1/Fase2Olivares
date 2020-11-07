@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>GoodGames</h1>
+
+  <p>Bienvenido a <em>GoodGames</em> tu pagina favorita de tutoriales</p>
+
+<h2>Dynamic content</h2>
+
+  <p>La pagina tiene los siguientes juegos y tutoriales:</p>
+  <ul>
+    <li><strong>Juegos:</strong> {{ num_juegos }}</li>
+    <li><strong>Juegos disponibles:</strong> {{ num_instances }}</li>
+  </ul>
+
+{% endblock %}
