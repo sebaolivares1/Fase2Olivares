@@ -32,7 +32,7 @@ class JuegoUpdate(UpdateView):
 
 class JuegoDelete(DeleteView):
     model = Juego
-    success_url = reverse_lazy('juegos')
+    success_url = reverse_lazy('index')
 
 class JuegoDetailView(generic.DetailView):
     model = Juego
