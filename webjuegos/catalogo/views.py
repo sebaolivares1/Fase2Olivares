@@ -13,3 +13,26 @@ def index(request):
         'index.html',
         context={'num_juegos': num_Juegos, 'num_instances': num_Instances,},
     )
+
+
+
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+
+
+#views
+
+class JuegoCreate(CreateView):
+    model = Juego
+    fields = '__all__'
+
+class JuegoUpdate(UpdateView):
+    model = Juego
+    fields = '__all__'
+
+class JuegoDelete(DeleteView):
+    model = Juego
+    success_url = reverse_lazy('juegos')
+
+class JuegoDetailView(generic.DetailView):
+    model = Juego
