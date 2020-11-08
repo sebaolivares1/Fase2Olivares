@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content%}
+
+<h1>Lista de juegps</h1>
+{%if juego_list%}
+
+<ul>
+{%for juego in juego_list%}
+    <li>
+        <a href="{{juego.get_absolute_url}}">{{juego.title}}</a>
+    </li>
+    {%endfor%}
+</ul>
+{%else%}
+<p>No hay juegos en el catalogo</p>
+{%endif%}
+
+{%endblock%}

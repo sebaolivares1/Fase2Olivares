@@ -36,3 +36,8 @@ class JuegoDelete(DeleteView):
 
 class JuegoDetailView(generic.DetailView):
     model = Juego
+
+
+class JuegoListView(generic.ListView):
+    model = Juego
+    paginate_by = 6
