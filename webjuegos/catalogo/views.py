@@ -14,6 +14,32 @@ def index(request):
         context={'num_juegos': num_Juegos, 'num_instances': num_Instances,},
     )
 
+def tuDestiny(request):
+    
+    return render(
+        request,
+        'tuDestiny.html',
+    )
+
+def tuSea(request):
+    
+    return render(
+        request,
+        'tuSea.html',
+    )
+
+def videos(request):
+    
+    return render(
+        request,
+        'videos.html',
+    )
+def agjuegos(request):
+    
+    return render(
+        request,
+        'agjuegos.html',
+    )
 
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView

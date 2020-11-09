@@ -3,6 +3,10 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('tutorialdestiny/', views.tuDestiny, name='tuDestiny'),
+    path('tutorialsea/', views.tuSea, name='tuSea'),
+    path('videos/', views.videos, name='videos'),
+    path('administrar/', views.agjuegos, name='agjuegos'),
     path('juego/<int:pk>', views.JuegoDetailView.as_view(), name='juego-detail'),
     path('juegos/', views.JuegoListView.as_view(), name='juegos'),
 ]
